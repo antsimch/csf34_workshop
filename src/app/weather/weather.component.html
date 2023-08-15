@@ -1,0 +1,49 @@
+<div>
+    <h3>Weather Search</h3>
+    <label for="city">City:</label>
+    &nbsp;
+    <input type="text" placeholder="Singapore" #city>
+    <button type="button" (click)="onSubmit(city.value)">Search</button>
+</div>
+
+<div *ngIf="weather.description">
+    <h3>{{ weather.city }}</h3>
+    
+    <table>
+        <tr>
+            <td>
+                <label for="description">Description:</label>
+            </td>
+            <td>
+                <span>{{ weather.description }}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="temperature">Temperature:</label>
+            </td>
+            <td>
+                <span>{{ weather.temperature }}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="pressure">Pressure:</label>
+            </td>
+            <td>
+                <span>{{ weather.pressure }}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="humidity">Humidity:</label>
+            </td>
+            <td>
+                <span>{{ weather.humidity }}</span>
+            </td>
+        </tr>
+    </table>    
+</div>
